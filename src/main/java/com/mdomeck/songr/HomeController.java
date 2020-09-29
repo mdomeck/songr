@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.PathVariable;
             welcome.addAttribute("message", message.toUpperCase());
 
             return "hello";
-
         }
+
     }
 
