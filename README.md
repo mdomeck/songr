@@ -5,6 +5,8 @@
 - Then go to localhost:8080
 - localhost:8080/capitalize/hello
 - localhost:8080/album
+- windows machine sudo service postgresql start
+
  
  #### dependencies
  - This dependency is used by the application.
