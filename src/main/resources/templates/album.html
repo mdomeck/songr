@@ -6,11 +6,22 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
+<form action="/album" method="POST">
+<input type="text" name="title" placeholder="Album Title">
+<input type="text" name="artist" placeholder="Artist">
+<input type="text" name="songCount" placeholder="Song Count">
+<input type="text" name="length" placeholder="Length">
+<input type="text" name="imageUrl" placeholder="Image URL">
+
+<input type="submit">
+</form>
+
 <div th:each="album : ${display}">
-    <h3 th:text="'Album Title : ' + ${album.title}">title</h3>
-    <h4 th:text="${album.artist}">artist</h4>
-    <p th:text="${album.songCount}">song count</p>
-    <p th:text="${album.length}">length</p>
+    <h3 th:text="${album.title}">Album Title</h3>
+    <h4 th:text="${album.artist}">Artist</h4>
+    <p th:text="${album.songCount}">Song Count</p>
+    <p th:text="${album.length}">Length</p>
     <img th:src="${album.imageUrl}">
 </div>
 

@@ -16,13 +16,13 @@ public class AlbumController {
     public AlbumRepository albumRepository;
 
     @PostMapping("/album")
-    public RedirectView addAlbum(String title, String artist, int songCount, int length, String ImageUrl) {
+    public RedirectView addAlbum(String title, String artist, int songCount, int length, String imageUrl) {
         Album newAlbum = new Album(
                 title,
                 artist,
                 songCount,
                 length,
-                ImageUrl
+                imageUrl
         );
 
         albumRepository.save(newAlbum);
