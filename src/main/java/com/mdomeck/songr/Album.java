@@ -1,14 +1,16 @@
 package com.mdomeck.songr;
 
-//import javax.persistence.Entity;
-//import javax.persistence.Id;
-//
-//@Entity
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Album {
 
-    //@Id
-      //  @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //long id:
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    long id;
 
 
     public String title;
@@ -24,6 +26,8 @@ public class Album {
         this.length = length;
         this.imageUrl = imageUrl;
     }
+
+    public Album(){}
 
     public String getTitle() {
         return title;
