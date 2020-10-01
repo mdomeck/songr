@@ -6,6 +6,7 @@
 - localhost:8080/capitalize/hello
 - localhost:8080/album
 - windows machine sudo service postgresql start
+- update application properties with your username, password
 
  
  #### dependencies
