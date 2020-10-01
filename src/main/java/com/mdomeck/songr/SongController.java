@@ -14,9 +14,10 @@ public class SongController {
     @Autowired SongRepository songRepository;
 
     @PostMapping("/song")
-    public RedirectView addSong(String title, long songId){
-        Album thisOne = albumRepository.getOne(songId);
+    public RedirectView addSong(String title, long albumId){
+        Album thisOne = albumRepository.getOne(albumId);
         Song thisSong = new Song(title, 10, 4, thisOne);
+        songRepository.save(thisSong);
 
         return new RedirectView("/album");
     }

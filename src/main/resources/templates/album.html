@@ -23,6 +23,17 @@
     <p th:text="${album.songCount}">Song Count</p>
     <p th:text="${album.length}">Length</p>
     <img th:src="${album.imageUrl}">
+<!--    <div th:if="${album.song.size() > 0}" th:text="${album.song.get}">    -->
+<!--    </div>-->
+    <div th:each="song : ${album.song}">
+       <p th:text="${song.title}">Song Title</p>
+
+    </div>
+    <form action="/song" method="POST">
+        <input type="hidden" name="albumId" th:value="${album.id}">
+        Song : <input type="text" name="title">
+        <input type="submit" value="add">
+    </form>
 </div>
 
 </body>
