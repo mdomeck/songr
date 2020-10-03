@@ -11,6 +11,7 @@ public class Song {
     long id;
 
     @ManyToOne
+
     public Album album;
 
     public String title;
@@ -65,5 +66,16 @@ public class Song {
 
     public void setTrackNumber(int trackNumber) {
         this.trackNumber = trackNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "id=" + id +
+                ", album=" + album +
+                ", title='" + title + '\'' +
+                ", length=" + length +
+                ", trackNumber=" + trackNumber +
+                '}';
     }
 }

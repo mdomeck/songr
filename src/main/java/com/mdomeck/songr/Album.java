@@ -1,9 +1,8 @@
 package com.mdomeck.songr;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -11,6 +10,10 @@ public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
+
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL, orphanRemoval = true)
+    public List<Song> tracks = new ArrayList<>();
+
 
     public String title;
     public String artist;
@@ -27,6 +30,14 @@ public class Album {
     }
 
     public Album(){}
+
+    public long getId() {
+        return id;
+    }
+
+    public List<Song> getTracks() {
+        return tracks;
+    }
 
     public String getTitle() {
         return title;
