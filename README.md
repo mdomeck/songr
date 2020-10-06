@@ -1,12 +1,12 @@
 ## songr
 
 - Once you clone the repo...
+- windows machine sudo service postgresql start
+- update application properties with your username, password
 - `./gradlew bootRun` in the terminal to run app
 - Then go to localhost:8080
 - localhost:8080/capitalize/hello
 - localhost:8080/album
-- windows machine sudo service postgresql start
-- update application properties with your username, password
 
  
  #### dependencies
