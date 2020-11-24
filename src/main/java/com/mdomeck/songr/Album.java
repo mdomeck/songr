@@ -14,7 +14,6 @@ public class Album {
     @OneToMany(mappedBy = "album", cascade = CascadeType.ALL, orphanRemoval = true)
     public List<Song> tracks = new ArrayList<>();
 
-
     public String title;
     public String artist;
     public int songCount;

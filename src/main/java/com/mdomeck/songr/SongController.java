@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
-
 import java.util.ArrayList;
-
 
 @Controller
 public class SongController {
@@ -28,7 +26,6 @@ public class SongController {
 
         return "songlist";
     }
-
 
     @PostMapping("/song")
     public RedirectView addSong(String title, long albumId, int track, int length) {
